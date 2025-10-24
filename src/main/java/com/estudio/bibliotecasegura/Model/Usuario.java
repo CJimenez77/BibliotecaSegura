@@ -29,8 +29,10 @@ public class Usuario {
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private Rol rol;
+
     @OneToMany(mappedBy = "usuario")
     private ArrayList<Prestamo> prestamosList = new ArrayList<>();
 
+    @Column
     private boolean estado;
 }

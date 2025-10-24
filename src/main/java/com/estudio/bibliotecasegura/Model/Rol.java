@@ -1,5 +1,5 @@
 package com.estudio.bibliotecasegura.Model;
 
 public enum Rol {
-    USUARIO, BIBLIOTECARIO
+    ROLE_USUARIO, ROLE_BIBLIOTECARIO
 }
