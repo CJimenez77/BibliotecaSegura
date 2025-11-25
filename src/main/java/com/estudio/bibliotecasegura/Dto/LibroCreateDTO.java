@@ -1,20 +1,17 @@
 package com.estudio.bibliotecasegura.Dto;
 
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 @Data
 public class LibroCreateDTO {
-    @NotBlank
-    private Long id;
-
-    @NotBlank
+    @NotBlank(message = "El título es obligatorio")
     private String titulo;
 
-    @NotBlank
+    @NotBlank(message = "El autor es obligatorio")
     private String autor;
 
-    @Size(min = 1)
+    @Min(value = 1, message = "Debe haber al menos 1 copia")
     private Integer nroCopias;
 }
